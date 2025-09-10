@@ -2,7 +2,8 @@
 
 **A modern, polyglot web server template showcasing Go, Rust, and Python integration**
 
-[![Go Version](https://img.shields.io/badge/Go-%3E%3D1.19-blue.svg)](https://golang.org/)
+
+[![Go Version](https://img.shields.io/badge/Go-%3E1.25-blue.svg)](https://golang.org/)
 [![Rust Version](https://img.shields.io/badge/Rust-%3E%3D1.70-orange.svg)](https://rust-lang.org/)
 [![Python Version](https://img.shields.io/badge/Python-%3E%3D3.8-green.svg)](https://python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
