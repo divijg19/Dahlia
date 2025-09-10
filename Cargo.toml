@@ -1,0 +1,20 @@
+[workspace]
+resolver = "2"
+members = [
+    "scripts/dahlia-cli",
+    "pkg/utils/rust-utils"
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Divij Gupta <divijg19@gmail.com>"]
+description = "High-performance utilities for Dahlia web server"
+license = "MIT"
+
+[workspace.dependencies]
+tokio = { version = "1.0", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+clap = { version = "4.0", features = ["derive"] }
+anyhow = "1.0"
