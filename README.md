@@ -2,7 +2,7 @@
 
 **A modern, scalable Golang web server template for rapid application development**
 
-[![Go Version](https://img.shields.io/badge/Go-%3E%3D1.19-blue.svg)](https://golang.org/)
+[![Go Version](https://img.shields.io/badge/Go-%3E1.25-blue.svg)](https://golang.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Build Status](https://img.shields.io/badge/Build-Pending-yellow.svg)](https://github.com/divijg19/Dahlia/actions)
 
