@@ -4,7 +4,7 @@
 
 
 [![Go Version](https://img.shields.io/badge/Go-%3E1.25-blue.svg)](https://golang.org/)
-[![Rust Version](https://img.shields.io/badge/Rust-%3E%3D1.89-vermillion.svg)](https://rust-lang.org/)
+[![Rust Version](https://img.shields.io/badge/Rust-%3E%3D1.89-red.svg)](https://rust-lang.org/)
 [![Python Version](https://img.shields.io/badge/Python-%3E%3D3.8-green.svg)](https://python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg)](#)
