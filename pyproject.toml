@@ -1,0 +1,15 @@
+[project]
+name = "Dahlia"
+version = "0.1.0"
+description = "Web Server written in Go, Rust, Python"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "ruff>=0.13.0",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.18.1",
+    "ruff>=0.13.0",
+]
