@@ -4,7 +4,7 @@
 
 
 [![Go Version](https://img.shields.io/badge/Go-%3E1.25-cyan.svg)](https://golang.org/)
-[![Rust Version](https://img.shields.io/badge/Rust-%3E%3D1.89-red.svg)](https://rust-lang.org/)
+[![Rust Version](https://img.shields.io/badge/Rust-%3E%3D1.94-red.svg)](https://rust-lang.org/)
 [![Python Version](https://img.shields.io/badge/Python-%3E%3D3.13-blue.svg)](https://python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg)](#)
@@ -185,15 +185,15 @@ dahlia/
 ## 🛠️ Technology Stack
 
 ### Core Technologies
-- **Go 1.19+**: Web server, APIs, business logic
+- **Go 1.22+**: Web server, APIs, business logic
   - Framework: Gin Gonic (lightweight and fast)
   - Configuration: Environment-based with defaults
   - Logging: Custom structured logging
-- **Rust 2021**: CLI tools, performance utilities
+- **Rust 2024**: CLI tools, performance utilities
   - CLI: Clap for command-line interface
   - HTTP: Reqwest for API clients
   - JSON: Serde for serialization
-- **Python 3.8+**: Analytics, automation, deployment
+- **Python 3.11+**: Analytics, automation, deployment
   - HTTP: Requests for API interactions  
   - Analytics: Custom log processing
   - Deployment: Docker and process automation
@@ -212,9 +212,9 @@ dahlia/
 
 ## 📋 Prerequisites
 
-- **Go 1.19+**: [Download Go](https://golang.org/dl/)
-- **Rust 1.70+**: [Install Rust](https://rustup.rs/)  
-- **Python 3.8+**: [Download Python](https://python.org/downloads/)
+- **Go 1.22+**: [Download Go](https://golang.org/dl/)
+- **Rust 1.89+**: [Install Rust](https://rustup.rs/)  
+- **Python 3.11+**: [Download Python](https://python.org/downloads/)
 - **Docker**: [Install Docker](https://docs.docker.com/get-docker/)
 - **Make**: Usually pre-installed (Linux/macOS) or [Windows](https://gnuwin32.sourceforge.net/packages/make.htm)
 
