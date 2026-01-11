@@ -1,5 +1,5 @@
 # Multi-stage Docker build for Dahlia
-FROM rust:1.75 as rust-builder
+FROM rust:1.94 as rust-builder
 
 WORKDIR /app
 COPY Cargo.toml Cargo.lock ./
@@ -9,7 +9,7 @@ COPY pkg/utils/rust-utils/ ./pkg/utils/rust-utils/
 # Build Rust components
 RUN cargo build --release
 
-FROM golang:1.21-alpine as go-builder
+FROM golang:1.25-alpine as go-builder
 
 WORKDIR /app
 COPY go.mod go.sum ./
@@ -19,7 +19,7 @@ COPY . .
 # Build Go application
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o bin/dahlia ./cmd/server
 
-FROM python:3.11-slim as python-base
+FROM python:3.13-slim as python-base
 
 # Install Python dependencies for scripts
 WORKDIR /app
@@ -35,8 +35,8 @@ WORKDIR /root/
 # Copy binaries from builders
 COPY --from=go-builder /app/bin/dahlia .
 COPY --from=rust-builder /app/target/release/dahlia ./dahlia-cli
-COPY --from=python-base /usr/local/bin/python3 /usr/local/bin/
-COPY --from=python-base /usr/local/lib/python3.11 /usr/local/lib/python3.11
+COPY --from=python-base /usr/local/bin/python3 /usr/local/bin/python3
+COPY --from=python-base /usr/local/lib/python3.13 /usr/local/lib/python3.13
 COPY scripts/python/ ./scripts/
 
 # Create non-root user

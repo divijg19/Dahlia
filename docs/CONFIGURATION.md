@@ -133,7 +133,10 @@ For complex deployments, create environment-specific files:
   "logging": {
     "level": "debug",
     "format": "text"
-  }
+  },
+  "database": {
+    "url": "postgres://user:password@localhost:5432/dahlia?sslmode=disable"
+  },
 }
 ```
 

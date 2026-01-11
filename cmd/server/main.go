@@ -3,7 +3,6 @@ package main
 import (
 	"context"
 	"fmt"
-	"log"
 	"net/http"
 	"os"
 	"os/signal"
@@ -44,7 +43,8 @@ func main() {
 	go func() {
 		logger.Info(fmt.Sprintf("🌸 Dahlia server starting on port %d", cfg.Port))
 		if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
-			log.Fatalf("Failed to start server: %v", err)
+			logger.Error(fmt.Sprintf("Failed to start server: %v", err))
+			os.Exit(1)
 		}
 	}()
 	
@@ -60,7 +60,8 @@ func main() {
 	defer cancel()
 	
 	if err := srv.Shutdown(ctx); err != nil {
-		log.Fatal("Server forced to shutdown:", err)
+		logger.Error(fmt.Sprintf("Server forced to shutdown: %v", err))
+		os.Exit(1)
 	}
 	
 	logger.Info("Server exited")

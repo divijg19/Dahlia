@@ -39,25 +39,28 @@ func New(level string) *Logger {
 	}
 }
 
+var (
+    outLogger = log.New(os.Stdout, "", log.LstdFlags)
+    errLogger = log.New(os.Stderr, "", log.LstdFlags)
+)
+
 // Debug logs debug messages
 func (l *Logger) Debug(msg string) {
 	if l.level <= DEBUG {
-		log.Printf("[DEBUG] %s", msg)
+		outLogger.Printf("[DEBUG] %s", msg)
 	}
 }
 
 // Info logs info messages
 func (l *Logger) Info(msg string) {
 	if l.level <= INFO {
-		log.Printf("[INFO] %s", msg)
+		outLogger.Printf("[INFO] %s", msg)
 	}
 }
 
 // Error logs error messages
 func (l *Logger) Error(msg string) {
 	if l.level <= ERROR {
-		log.SetOutput(os.Stderr)
-		log.Printf("[ERROR] %s", msg)
-		log.SetOutput(os.Stdout)
+		errLogger.Printf("[ERROR] %s", msg)
 	}
 }

@@ -15,13 +15,13 @@ pub mod json_utils {
     /// Merge multiple JSON objects
     pub fn merge_objects(objects: Vec<Value>) -> Result<Value> {
         let mut result = serde_json::Map::new();
-        
+
         for obj in objects {
             if let Value::Object(map) = obj {
                 result.extend(map);
             }
         }
-        
+
         Ok(Value::Object(result))
     }
 }
@@ -32,10 +32,10 @@ pub mod string_utils {
 
     /// Generate a unique ID based on timestamp and randomness
     pub fn generate_id() -> String {
-        let timestamp = SystemTime::now()
-            .duration_since(UNIX_EPOCH)
-            .unwrap()
-            .as_millis();
+        let timestamp = match SystemTime::now().duration_since(UNIX_EPOCH) {
+            Ok(dur) => dur.as_millis(),
+            Err(_) => 0u128,
+        };
         format!("dahlia_{}", timestamp)
     }
 
