@@ -2,13 +2,13 @@
 resolver = "2"
 members = [
     "scripts/dahlia-cli",
-    "pkg/utils/rust-utils"
+    "pkg/utils"
 ]
 
 [workspace.package]
 version = "0.1.0"
-edition = "2021"
-authors = ["Divij Gupta <divijg19@gmail.com>"]
+edition = "2024"
+authors = ["Divij Ganjoo <divijganjoo2003@gmail.com>"]
 description = "High-performance utilities for Dahlia web server"
 license = "MIT"
 
