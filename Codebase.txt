@@ -10,6 +10,11 @@ PLANNING.md
 README.md
 cmd/server/main.go
 docker-compose.yml
+docs/API.md
+docs/ARCHITECTURE.md
+docs/CONFIGURATION.md
+docs/DEPLOYMENT.md
+docs/DEVELOPMENT.md
 go.mod
 go.sum
 internal/api/routes.go

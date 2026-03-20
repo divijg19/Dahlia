@@ -15,6 +15,7 @@ coverage.html
 
 # Go workspace file
 go.work
+vendor/
 
 # Rust artifacts  
 target/
